@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" class="t-intercom">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CCEL · Intercom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap">
+<link rel="stylesheet" href="../_shared/brand/brand.css">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="../_shared/dk/bridge.css">
+<link rel="stylesheet" href="../_shared/dk/home.css">
+<link rel="stylesheet" href="assets/theme.css">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js')</script>
+<script defer src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+<body class="home">
+<div class="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html"><img class="ccel-logo" data-logo src="../_shared/img/logo2.png" width="200" height="102" alt="CCEL logo"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span><span class="sr">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Welcome</a></li>
+        <li><a href="professor.html">Professor</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <p class="pill">Seoul National University · Materials Science and Engineering</p>
+        <h1>Catalysts and energy materials, designed with AI, simulation, and experiment</h1>
+        <p class="lead" id="tagline"></p>
+        <div class="cta"><a class="btn primary" href="research.html">Explore research</a><a class="btn" href="publications.html">Publications</a></div>
+      </div>
+      <figure class="hero-media"><img src="../_shared/dk/hero_lattice.jpg" alt="" width="1600" height="1000"></figure>
+      <div class="stats" id="stats"></div>
+    </section>
+  </div>
+
+  <section class="sec panel" id="approach"><div class="wrap"><div class="box approach">
+    <div><p class="eyebrow">Our approach</p><h2>Design, predict, validate</h2><p id="approach-text"></p><a class="btn" href="research.html">How we work</a></div>
+    <img src="../_shared/dk/approach.jpg" alt="Research loop: AI, computational materials design, experimental validation and analysis" loading="lazy">
+  </div></div></section>
+
+  <section class="sec research alt" id="research"><div class="wrap">
+    <div class="sec-top"><h2>Research</h2><a class="btn" href="research.html">All research areas</a></div>
+    <ol class="rlist" id="rlist"></ol>
+  </div></section>
+  <div class="rpeek" aria-hidden="true"><img alt=""></div>
+
+  <section class="sec panel"><div class="wrap"><div class="box two">
+    <div><div class="sec-top"><h2>News</h2></div><ul class="newslist" id="news"></ul></div>
+    <aside class="joinbox" id="join"><p class="eyebrow">Open positions</p><h3>Join CCEL</h3><p id="join-ko" lang="ko"></p><a class="btn" id="join-mail" href="#"></a></aside>
+  </div></div></section>
+
+  <section class="sec selected"><div class="wrap">
+    <div class="sec-top"><h2>Selected publications</h2><a class="btn" href="publications.html#selected">All selected</a></div>
+    <div class="selgrid" id="selgrid"></div>
+  </div></section>
+
+  <section class="sec covers alt"><div class="wrap">
+    <div class="sec-top"><h2>Journal covers</h2><a class="btn" id="cov-all" href="publications.html#covers">All covers</a></div>
+  </div>
+    <div class="marquee"><div class="track" id="cov1"></div></div>
+    <div class="marquee rev"><div class="track" id="cov2"></div></div>
+  </section>
+
+  <section class="sec partners"><div class="wrap"><p class="eyebrow">Funding and partners</p></div>
+    <div class="marquee"><div class="track" id="spon"></div></div>
+  </section>
+
+  <section class="sec panel"><div class="wrap"><div class="box about">
+    <div><p class="eyebrow">About CCEL</p><h2 lang="ko">계산촉매 및 첨단소재설계 연구실</h2><p id="about-ko" lang="ko"></p></div>
+    <div class="films" id="films"></div>
+  </div></div></section>
+</main>
+<footer class="site-ftr" id="site-ftr"></footer>
+<script src="../_shared/content.js"></script>
+<script src="assets/site.js"></script>
+<script src="../_shared/dk/home.js"></script>
+<script src="../_shared/dk/motion.js"></script>
+</body>
+</html>

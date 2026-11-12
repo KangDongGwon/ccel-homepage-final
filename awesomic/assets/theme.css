@@ -1,0 +1,21 @@
+/* DK theme: Awesomic — tokens, then layout switches */
+:root{--ccel-font:'DM Sans','S-CoreDream', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;--dfont:'Bricolage Grotesque','S-CoreDream', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+   --bg:#f1f1f3;--page:radial-gradient(1100px 700px at 92% 0%,rgba(255,90,0,.36),transparent 62%),radial-gradient(900px 640px at -6% 18%,rgba(254,69,226,.20),transparent 60%),radial-gradient(1000px 900px at 100% 48%,rgba(255,160,60,.18),transparent 60%),radial-gradient(900px 900px at 0% 80%,rgba(254,69,226,.12),transparent 60%),linear-gradient(170deg,#fff3e8 0%,#f6f4f6 40%,#f1e8f5 100%);
+   --ink:#09090b;--navy:#09090b;--navy-deep:#09090b;--muted:#52525b;--rule:#e4e4e7;--rule-strong:#d4d4d8;--band:#f4f4f5;
+   --accent:#ff5a00;--accent-ink:#c2410c;--surface:#fff;--surface-2:#f4f4f5;--hdr-bg:#fff;--hdr-line:rgba(9,9,11,.06);
+   --r-card:28px;--r-btn:14px;--w-display:700;--track:-.03em;--display:clamp(38px,4.4vw,62px);
+   --pill-bg:#ff5a00;--pill-ink:#fff;--tile-bg:linear-gradient(140deg,#ff7a1a 0%,#e0389f 100%);--join-bg:linear-gradient(135deg,#ff5a00 0%,#e0389f 100%);--join-ink:#fff;--ftr-bg:#09090b}
+
+.hero{background:#fff;border:1px solid var(--rule);border-radius:36px;padding:52px;margin-top:20px;box-shadow:0 4px 24px rgba(0,0,0,.05)}
+.hero-media{border-radius:24px}
+.home .sec.panel>.wrap>.box{background:rgba(255,255,255,.72);border:1px solid rgba(9,9,11,.06);border-radius:36px;padding:52px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.rlist{border-top:0}.rlist li{border-bottom-color:var(--rule)}.rlist a{border-radius:18px}
+.newslist li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:12px;vertical-align:middle}
+.newslist li p{display:inline}
+.joinbox .btn{border-color:rgba(255,255,255,.6)}
+.page-head h1{font-size:clamp(40px,5vw,72px);font-weight:700}
+.page-head .wrap{background:#fff;border:1px solid var(--rule);border-radius:36px;padding:44px 52px;margin-top:20px;box-shadow:0 4px 24px rgba(0,0,0,.04)}
+.inner>.wrap,.inner>section>.wrap{background:rgba(255,255,255,.78);border-radius:36px;margin-top:20px;margin-bottom:20px;padding-top:12px;padding-bottom:12px}
+.cite-thumb img,.mrow-photo,.mrow-photo img,.area-fig img,.profile-photo img,.group-photo img{border-radius:18px}
+.subnav [aria-selected="true"],.site-nav a[aria-current="page"]{border-bottom-color:var(--accent)}
+@media(max-width:768px){.hero,.page-head .wrap{padding:26px;border-radius:24px}.home .sec.panel>.wrap>.box{padding:26px;border-radius:24px}}

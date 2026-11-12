@@ -1,0 +1,14 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>CCEL 강동권 최종안 3종</title><style>
+:root{--bar:#13235B;--on:#f0b429}
+body{margin:0;font-family:'Malgun Gothic',system-ui,sans-serif;background:#eee;display:flex;flex-direction:column;height:100vh}
+.bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:var(--bar);color:#fff;flex-wrap:wrap}
+.bar b{margin-right:10px} button,select,a.open{border:0;border-radius:6px;padding:8px 14px;font:inherit;font-size:13px;cursor:pointer;background:#2b3d7c;color:#fff;text-decoration:none}
+button.on{background:var(--on);color:var(--bar);font-weight:700} #note{margin-left:auto;font-size:13px;opacity:.9}
+iframe{flex:1;border:0;width:100%;background:#fff}</style></head><body>
+<div class="bar"><b>CCEL 최종안 3종 (강동권)</b><button data-key="awesomic" data-note="밝은 회색 바탕에 주황·자홍 빛, 둥근 흰 카드, 서체 Bricolage Grotesque + DM Sans">Awesomic</button><button data-key="intercom" data-note="크림·리넨 바탕, 아주 큰 제목과 검은 가는 선, 서체 Schibsted Grotesk">Intercom</button><button data-key="mercury" data-note="코발트 빛 어두운 남색, 사진 위에 얇고 넓은 제목, 서체 Archivo(넓은 폭) + Inter">Mercury</button><select id="pg" aria-label="쪽"><option value="index.html">Index</option><option value="professor.html">Professor</option><option value="members.html">Members</option><option value="research.html">Research</option><option value="publications.html">Publications</option><option value="contact.html">Contact</option></select><a class="open" id="open" target="_blank">새 창</a><span id="note"></span></div>
+<iframe id="f" title="시안"></iframe>
+<script>const b=[...document.querySelectorAll('button')],f=document.getElementById('f'),n=document.getElementById('note'),pg=document.getElementById('pg'),op=document.getElementById('open');let cur=b[0];
+function go(x){cur=x;b.forEach(y=>y.classList.toggle('on',y===x));const u=x.dataset.key+'/'+pg.value;f.src=u;op.href=u;n.textContent=x.dataset.note;}
+b.forEach(x=>x.onclick=()=>go(x));pg.onchange=()=>go(cur);go(b[0]);
+document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT')return;const i=b.indexOf(cur);if(e.key==='ArrowRight')go(b[(i+1)%b.length]);if(e.key==='ArrowLeft')go(b[(i+b.length-1)%b.length]);});</script></body></html>

@@ -1,0 +1,44 @@
+/* Bridge between Jinuk's shared site.css (ccel-s1, cloned 261110) and our three themes.
+   site.css hard-codes white surfaces in ~20 places; here each of them reads a variable instead,
+   so a theme only sets tokens (and a dark theme like Mercury works without touching site.css). */
+:root {
+  --bg: #fff; --page: none;
+  --surface: #fff; --surface-2: #eef0f7; --on-strong: #fff;
+  --hdr-bg: #fff; --hdr-line: var(--rule);
+  --dfont: var(--ccel-font);
+  --w-display: 500; --track: 0; --stretch: 100%;
+  --r-card: 8px; --r-btn: 6px;
+  --ftr-bg: var(--navy-deep); --ftr-ink: #d9dcea; --ftr-strong: #fff;
+  --logo-w: 150px;
+}
+html { background: var(--bg); }
+body { background: var(--page); background-color: var(--bg); background-repeat: no-repeat; background-size: 100% 100%;
+  font-family: var(--ccel-font); color: var(--ink); overflow-x: clip; }
+h1, h2, h3 { font-family: var(--dfont); font-stretch: var(--stretch); letter-spacing: var(--track); }
+
+.skip, .nav-toggle, .cite-tile, .badge, .vswitch, .gbtn, .profile-photo img, .profile-links a,
+.filters input[type="search"], .filters select { background: var(--surface); }
+.badge.hl { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
+.vswitch a:hover { background: var(--surface-2); }
+.vswitch a[aria-current], .seg input:checked + span, .seg input:checked + span .ticon,
+.profile-links a:hover, .join .mail:hover { color: var(--on-strong); }
+
+/* header: translucent over the page gradient, smaller logo, hides on scroll down (motion.js) */
+.ccel-logo { width: var(--logo-w); }
+:root { --hdr: calc(var(--logo-w) * .51 + 26px); }
+.site-hdr { background: color-mix(in srgb, var(--hdr-bg) 78%, transparent); border-bottom: 1px solid var(--hdr-line);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2);
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1), background-color .35s; }
+.site-hdr.hide { transform: translateY(-100%); }
+@media (max-width: 960px) { .site-nav { background: var(--surface); } }
+@media (max-width: 768px) { :root { --logo-w: 124px; } }
+
+/* footer */
+.site-ftr { background: var(--ftr-bg); color: var(--ftr-ink); }
+.site-ftr a, .ftr-name { color: var(--ftr-strong); }
+
+/* page heads on the inner pages sit on the page gradient instead of a grey band */
+.page-head { background: transparent; }
+
+.progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); transform-origin: 0 50%;
+  transform: scaleX(0); z-index: 70; pointer-events: none; }
