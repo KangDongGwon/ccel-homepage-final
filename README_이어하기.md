@@ -32,5 +32,5 @@ Lenis 부드러운 스크롤, 맨 위 진행 막대, 내리면 숨고 올리면 
 ## 남은 일 / 알아둘 것
 - 대표 논문 6편(교수님 고정 목록)은 4편이 표지 그림이 없어 분야 번호 카드로 표시한다. 논문별 그림을 받으면 바꿀 수 있다
 - 연구실 영상 2개는 지금 서버(http://ccel.snu.ac.kr/pages/vid/)에서 불러온다. https 로 공개하면 막힐 수 있다
-- 아직 공개 저장소에 올리지 않았다. 올리려면 이 폴더를 새 저장소로 push (용량 약 20 MB)
+- 261112 공개: https://kangdonggwon.github.io/ccel-homepage-final/ (저장소 KangDongGwon/ccel-homepage-final, public, 이 폴더가 곧 저장소). 갱신 = `python build_final.py` 후 이 폴더에서 `git add -A`, `git -c user.name=Mosani13 -c user.email=dkclaude13@gmail.com commit -m ...`, `git push`. 1~2분 뒤 반영. 10/26 링크(ccel-homepage-mockup)는 그대로 둠
 - 다음 단계 후보: 진욱·기헌 씨에게 "데이터·하위 쪽은 진욱 것 공통, 디자인은 각자 3종" 구조 제안
